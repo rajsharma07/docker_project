@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Todo App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="container">
+        <section class="card">
+            <div class="header">
+                <div>
+                    <p class="eyebrow">FULL-STACK DOCKER PROJECT</p>
+                    <h1>My Todo List</h1>
+                    <p class="subtitle">Node.js + Express + Flask + SQLite</p>
+                </div>
+            </div>
+
+            <form id="todoForm" class="todo-form">
+                <input
+                    id="todoInput"
+                    type="text"
+                    maxlength="200"
+                    placeholder="What do you need to do?"
+                    autocomplete="off"
+                    required
+                >
+                <button type="submit">Add Todo</button>
+            </form>
+
+            <div class="toolbar">
+                <div id="summary">0 tasks</div>
+                <button id="clearCompleted" class="secondary" type="button">
+                    Clear completed
+                </button>
+            </div>
+
+            <div id="message" class="message hidden"></div>
+
+            <div id="emptyState" class="empty-state">
+                <div class="empty-icon">✓</div>
+                <h2>No todos yet</h2>
+                <p>Add your first task above.</p>
+            </div>
+
+            <ul id="todoList" class="todo-list"></ul>
+        </section>
+    </main>
+
+    <script src="app.js"></script>
+</body>
+</html>
