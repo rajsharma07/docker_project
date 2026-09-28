@@ -31,6 +31,9 @@ def initialize_database():
     conn.close()
 
 
+initialize_database()
+
+
 @app.get("/")
 def home():
     return jsonify({
@@ -122,5 +125,4 @@ def delete_todo(todo_id):
 
 
 if __name__ == "__main__":
-    initialize_database()
     app.run(host="0.0.0.0", port=5000)
